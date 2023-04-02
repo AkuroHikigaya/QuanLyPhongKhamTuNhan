@@ -18,6 +18,16 @@ namespace QLPKT
         public statistical()
         {
             InitializeComponent();
+            conn = functions.connect();
+        }
+        private string id, name, role;
+        public statistical(string id, string name, string role)
+        {
+            InitializeComponent();
+            conn = functions.connect();
+            this.id = id;
+            this.name = name;
+            this.role = role;
         }
 
         private void btn_SearchDoanhThu_Click(object sender, EventArgs e)
@@ -42,6 +52,13 @@ namespace QLPKT
             }
             lb_tongHD.Text += counthd;
             lb_tongDT.Text += countdt;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            admin_home adh = new admin_home(id, name, role);
+            adh.Show();
+            this.Hide();
         }
     }
 }

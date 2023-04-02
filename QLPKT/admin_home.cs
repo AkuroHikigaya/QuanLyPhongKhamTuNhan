@@ -74,7 +74,7 @@ namespace QLPKT
         }
         private void btn_toTK_Click(object sender, EventArgs e)
         {
-            statistical st = new statistical();
+            statistical st = new statistical(id, name, role);
             st.Show();
             this.Hide();
 
