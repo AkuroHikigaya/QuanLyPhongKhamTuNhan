@@ -18,11 +18,29 @@ namespace QLPKT
         public invoice()
         {
             InitializeComponent();
+            conn = functions.connect();
+        }
+
+        private string id, name, role;
+        public invoice(string id, string name, string role)
+        {
+            InitializeComponent();
+            conn = functions.connect();
+            this.id = id;
+            this.name = name;
+            this.role = role;
         }
 
         private void invoice_Load(object sender, EventArgs e)
         {
             functions.display(hdDataTable, "Select a.HD_ID 'Mã hóa đơn',  b.PK_ID 'Mã phiếu khám', c.BN_ID 'Mã bệnh nhân', c.BN_TEN 'Tên bệnh nhân', f.NV_ID 'Mã nhân viên', f.NV_TEN 'Tên nhân viên', l.LK_TEN 'Tên Loại', a.HD_TONGTIEN 'Tổng tiền' from HOA_DON a, PHIEU_KHAM b, BENH_NHAN c, NHAN_VIEN f, LOAI_KHAM l WHERE a.PK_ID = b.PK_ID AND b.BN_ID = c.BN_ID AND b.NV_ID = f.NV_ID AND b.LK_ID = l.LK_ID", conn);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            admin_home adh = new admin_home(id, name, role);
+            adh.Show();
+            this.Hide();
         }
     }
 }

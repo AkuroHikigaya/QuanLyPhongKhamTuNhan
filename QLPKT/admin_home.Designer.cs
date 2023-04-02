@@ -96,6 +96,7 @@
             // 
             this.panel2.Controls.Add(this.label99);
             this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel2.Location = new System.Drawing.Point(406, 391);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(262, 75);
@@ -105,6 +106,7 @@
             // label99
             // 
             this.label99.AutoSize = true;
+            this.label99.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label99.ForeColor = System.Drawing.Color.SeaGreen;
             this.label99.Location = new System.Drawing.Point(59, 27);

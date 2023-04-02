@@ -38,7 +38,7 @@
             // 
             // date_ngaylaphoadon
             // 
-            this.date_ngaylaphoadon.Location = new System.Drawing.Point(214, 85);
+            this.date_ngaylaphoadon.Location = new System.Drawing.Point(213, 108);
             this.date_ngaylaphoadon.Margin = new System.Windows.Forms.Padding(2);
             this.date_ngaylaphoadon.Name = "date_ngaylaphoadon";
             this.date_ngaylaphoadon.Size = new System.Drawing.Size(151, 20);
@@ -47,7 +47,7 @@
             // nhapngay
             // 
             this.nhapngay.AutoSize = true;
-            this.nhapngay.Location = new System.Drawing.Point(102, 90);
+            this.nhapngay.Location = new System.Drawing.Point(101, 113);
             this.nhapngay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nhapngay.Name = "nhapngay";
             this.nhapngay.Size = new System.Drawing.Size(62, 13);
@@ -57,7 +57,7 @@
             // nhapsotien
             // 
             this.nhapsotien.AutoSize = true;
-            this.nhapsotien.Location = new System.Drawing.Point(102, 44);
+            this.nhapsotien.Location = new System.Drawing.Point(101, 67);
             this.nhapsotien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nhapsotien.Name = "nhapsotien";
             this.nhapsotien.Size = new System.Drawing.Size(70, 13);
@@ -66,7 +66,7 @@
             // 
             // btn_themhoadon
             // 
-            this.btn_themhoadon.Location = new System.Drawing.Point(256, 141);
+            this.btn_themhoadon.Location = new System.Drawing.Point(255, 164);
             this.btn_themhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_themhoadon.Name = "btn_themhoadon";
             this.btn_themhoadon.Size = new System.Drawing.Size(87, 19);
@@ -77,7 +77,7 @@
             // 
             // btn_huy_themhoadon
             // 
-            this.btn_huy_themhoadon.Location = new System.Drawing.Point(121, 141);
+            this.btn_huy_themhoadon.Location = new System.Drawing.Point(120, 164);
             this.btn_huy_themhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_huy_themhoadon.Name = "btn_huy_themhoadon";
             this.btn_huy_themhoadon.Size = new System.Drawing.Size(87, 19);
@@ -88,7 +88,7 @@
             // 
             // tb_nhapSotien
             // 
-            this.tb_nhapSotien.Location = new System.Drawing.Point(214, 42);
+            this.tb_nhapSotien.Location = new System.Drawing.Point(213, 65);
             this.tb_nhapSotien.Margin = new System.Windows.Forms.Padding(2);
             this.tb_nhapSotien.Name = "tb_nhapSotien";
             this.tb_nhapSotien.Size = new System.Drawing.Size(151, 20);
