@@ -17,10 +17,11 @@ namespace QLPKT
         public SqlConnection conn;
         public void connect()
         {
-            string connstring = "server = DESKTOP-JPF548A; database = QLPK; Integrated Security = True";
-            conn = new SqlConnection();
-            conn.ConnectionString = connstring;
-            conn.Open();
+            //string connstring = "server = DESKTOP-33H3AUS; database = QLPK; Integrated Security = True";
+            //conn = new SqlConnection();
+            //conn.ConnectionString = connstring;
+            Function f = new Function();
+            conn = f.connect();
         }
 
         public Form1()

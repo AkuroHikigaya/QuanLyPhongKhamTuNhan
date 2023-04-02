@@ -40,35 +40,54 @@ namespace QLPKT
             }
         }
 
-        private void btn_toApp_Click(object sender, EventArgs e)
-        {
-            patient_form bn = new patient_form();
-            bn.Show();
-        }
+       
 
         private void panel2_Click(object sender, EventArgs e)
         {
             invoice hd = new invoice();
             hd.Show();
+            this.Hide();
         }
 
         private void label99_Click(object sender, EventArgs e)
         {
             invoice hd = new invoice();
             hd.Show();
+            this.Hide();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
             patient_form bn = new patient_form();
             bn.Show();
+            this.Hide();
+
         }
 
+        private void btn_toApp_Click(object sender, EventArgs e)
+        {
+            patient_form bn = new patient_form();
+            bn.Show();
+            this.Hide();
+
+        }
         private void btn_toTK_Click(object sender, EventArgs e)
         {
             statistical st = new statistical();
             st.Show();
+            this.Hide();
+
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            thongtin_nv ttnv = new thongtin_nv(id, name, role);
+            ttnv.Tag = tagValue;
+            ttnv.Show();
+            this.Hide();
+        }
+        
 
         private void btn_toQLNV_Click(object sender, EventArgs e)
         {

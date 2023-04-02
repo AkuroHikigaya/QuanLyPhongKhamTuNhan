@@ -17,10 +17,12 @@ namespace QLPKT
         public SqlConnection conn;
         public void ketnoi()
         {
-            string chuoiketnoi = "SERVER = DESKTOP-33H3AUS ; database = QLPKTN; Integrated Security = True; MultipleActiveResultSets = true";
-            conn = new SqlConnection();
-            conn.ConnectionString = chuoiketnoi;
-            conn.Open();
+            //string chuoiketnoi = "SERVER = DESKTOP-33H3AUS ; database = QLPKTN; Integrated Security = True; MultipleActiveResultSets = true";
+            //conn = new SqlConnection();
+            //conn.ConnectionString = chuoiketnoi;
+            //conn.Open();
+            Function f = new Function();
+            conn = f.connect();
         }
         public string gioitinh = "";
 
