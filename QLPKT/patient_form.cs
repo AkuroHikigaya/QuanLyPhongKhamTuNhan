@@ -20,8 +20,19 @@ namespace QLPKT
             InitializeComponent();
         }
 
+        private string id, name, role;
+        public patient_form(string id, string name, string role)
+        {
+            InitializeComponent();
+            this.id = id;
+            this.name = name;
+            this.role = role;
+        }
+
         private void patient_form_Load(object sender, EventArgs e)
         {
+            tb_nvId.Text = id;
+            tb_nvId.Enabled = false;
             conn = functions.connect();
             functions.display(bnDataTable, "Select a.BN_ID 'Mã bệnh nhân', a.BN_Ten 'Tên bệnh nhân', a.BN_NgaySinh 'Ngày sinh', a.BN_SDT 'Số điện thoại', a.BN_GioiTinh 'Giới tính', a.BN_DiaChi 'Địa chỉ', b.PK_TRIEUCHUNG 'Triệu chứng', b.PK_ID  From BENH_NHAN a, PHIEU_KHAM b Where a.BN_ID = b.BN_ID", conn);
             bnDataTable.Columns["PK_ID"].Visible = false;
@@ -159,6 +170,13 @@ namespace QLPKT
         {
             lich_hen lh = new lich_hen();
             lh.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            admin_home adm = new admin_home(id, name, role);
+            adm.Show();
+            this.Hide();
         }
     }
 

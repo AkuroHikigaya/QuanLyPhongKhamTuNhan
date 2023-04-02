@@ -55,6 +55,7 @@
             this.lb_role = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lb_logout = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -73,6 +74,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lb_logout);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.bttn_toQLT);
             this.panel1.Controls.Add(this.button4);
@@ -411,6 +413,21 @@
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
+            // lb_logout
+            // 
+            this.lb_logout.AutoSize = true;
+            this.lb_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_logout.Font = new System.Drawing.Font("UTM BryantLG", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_logout.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lb_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lb_logout.Location = new System.Drawing.Point(589, 18);
+            this.lb_logout.Name = "lb_logout";
+            this.lb_logout.Size = new System.Drawing.Size(100, 24);
+            this.lb_logout.TabIndex = 22;
+            this.lb_logout.Text = "Đăng xuất";
+            this.lb_logout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lb_logout.Click += new System.EventHandler(this.lb_logout_Click);
+            // 
             // admin_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,5 +490,6 @@
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lb_logout;
     }
 }

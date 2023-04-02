@@ -107,11 +107,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("UTM BryantLG", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label2.Location = new System.Drawing.Point(1000, 90);
+            this.label2.Location = new System.Drawing.Point(998, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 33);
+            this.label2.Size = new System.Drawing.Size(207, 35);
             this.label2.TabIndex = 50;
             this.label2.Text = "PHÒNG KHÁM";
             // 
@@ -129,7 +129,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(277, 101);
+            this.textBox1.Location = new System.Drawing.Point(279, 87);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(308, 22);
             this.textBox1.TabIndex = 48;
@@ -143,7 +143,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(191, 103);
+            this.label3.Location = new System.Drawing.Point(193, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 22);
             this.label3.TabIndex = 47;
@@ -153,7 +153,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Green;
-            this.panel6.Location = new System.Drawing.Point(189, 129);
+            this.panel6.Location = new System.Drawing.Point(191, 115);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(400, 1);
             this.panel6.TabIndex = 46;
@@ -163,7 +163,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(157, 101);
+            this.pictureBox5.Location = new System.Drawing.Point(159, 87);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 30);
             this.pictureBox5.TabIndex = 45;
@@ -186,11 +186,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("UTM BryantLG", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(920, 50);
+            this.label1.Location = new System.Drawing.Point(922, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 36);
+            this.label1.Size = new System.Drawing.Size(283, 36);
             this.label1.TabIndex = 43;
             this.label1.Text = "Danh sách nhân viên";
             // 
@@ -570,12 +570,12 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(156, 143);
+            this.dataGridView1.Location = new System.Drawing.Point(156, 123);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 35;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1049, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(1049, 307);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);

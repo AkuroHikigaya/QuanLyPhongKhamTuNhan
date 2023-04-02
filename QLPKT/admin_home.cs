@@ -44,14 +44,14 @@ namespace QLPKT
 
         private void panel2_Click(object sender, EventArgs e)
         {
-            invoice hd = new invoice();
+            invoice hd = new invoice(id, name, role);
             hd.Show();
             this.Hide();
         }
 
         private void label99_Click(object sender, EventArgs e)
         {
-            invoice hd = new invoice();
+            invoice hd = new invoice(id, name, role);
             hd.Show();
             this.Hide();
 
@@ -59,7 +59,7 @@ namespace QLPKT
 
         private void label3_Click(object sender, EventArgs e)
         {
-            patient_form bn = new patient_form();
+            patient_form bn = new patient_form(id, name, role);
             bn.Show();
             this.Hide();
 
@@ -67,7 +67,7 @@ namespace QLPKT
 
         private void btn_toApp_Click(object sender, EventArgs e)
         {
-            patient_form bn = new patient_form();
+            patient_form bn = new patient_form(id, name, role);
             bn.Show();
             this.Hide();
 
@@ -99,6 +99,13 @@ namespace QLPKT
         
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Close();
+        }
+
+        private void lb_logout_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
             f1.Show();
