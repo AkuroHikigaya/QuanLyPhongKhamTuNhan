@@ -41,7 +41,7 @@
             // tb_nhapSotien
             // 
             this.tb_nhapSotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nhapSotien.Location = new System.Drawing.Point(181, 62);
+            this.tb_nhapSotien.Location = new System.Drawing.Point(202, 62);
             this.tb_nhapSotien.Margin = new System.Windows.Forms.Padding(2);
             this.tb_nhapSotien.Name = "tb_nhapSotien";
             this.tb_nhapSotien.Size = new System.Drawing.Size(205, 26);
@@ -53,9 +53,9 @@
             this.btn_huy_themhoadon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_huy_themhoadon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_huy_themhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_huy_themhoadon.Font = new System.Drawing.Font("UTM BryantLG", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy_themhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy_themhoadon.ForeColor = System.Drawing.Color.White;
-            this.btn_huy_themhoadon.Location = new System.Drawing.Point(266, 165);
+            this.btn_huy_themhoadon.Location = new System.Drawing.Point(257, 165);
             this.btn_huy_themhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_huy_themhoadon.Name = "btn_huy_themhoadon";
             this.btn_huy_themhoadon.Size = new System.Drawing.Size(120, 40);
@@ -70,12 +70,12 @@
             this.btn_themhoadon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_themhoadon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_themhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_themhoadon.Font = new System.Drawing.Font("UTM BryantLG", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_themhoadon.ForeColor = System.Drawing.Color.White;
-            this.btn_themhoadon.Location = new System.Drawing.Point(77, 165);
+            this.btn_themhoadon.Location = new System.Drawing.Point(66, 165);
             this.btn_themhoadon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_themhoadon.Name = "btn_themhoadon";
-            this.btn_themhoadon.Size = new System.Drawing.Size(120, 40);
+            this.btn_themhoadon.Size = new System.Drawing.Size(148, 40);
             this.btn_themhoadon.TabIndex = 9;
             this.btn_themhoadon.Text = "Thêm hóa đơn";
             this.btn_themhoadon.UseVisualStyleBackColor = true;
@@ -84,29 +84,29 @@
             // nhapsotien
             // 
             this.nhapsotien.AutoSize = true;
-            this.nhapsotien.Font = new System.Drawing.Font("UTM BryantLG", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhapsotien.Location = new System.Drawing.Point(73, 69);
+            this.nhapsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhapsotien.Location = new System.Drawing.Point(62, 65);
             this.nhapsotien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nhapsotien.Name = "nhapsotien";
-            this.nhapsotien.Size = new System.Drawing.Size(104, 19);
+            this.nhapsotien.Size = new System.Drawing.Size(115, 20);
             this.nhapsotien.TabIndex = 10;
             this.nhapsotien.Text = "Nhập số tiền:";
             // 
             // nhapngay
             // 
             this.nhapngay.AutoSize = true;
-            this.nhapngay.Font = new System.Drawing.Font("UTM BryantLG", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhapngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nhapngay.Location = new System.Drawing.Point(73, 109);
             this.nhapngay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nhapngay.Name = "nhapngay";
-            this.nhapngay.Size = new System.Drawing.Size(89, 19);
+            this.nhapngay.Size = new System.Drawing.Size(99, 20);
             this.nhapngay.TabIndex = 11;
             this.nhapngay.Text = "Nhập ngày:";
             // 
             // date_ngaylaphoadon
             // 
             this.date_ngaylaphoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_ngaylaphoadon.Location = new System.Drawing.Point(181, 103);
+            this.date_ngaylaphoadon.Location = new System.Drawing.Point(202, 109);
             this.date_ngaylaphoadon.Margin = new System.Windows.Forms.Padding(2);
             this.date_ngaylaphoadon.Name = "date_ngaylaphoadon";
             this.date_ngaylaphoadon.Size = new System.Drawing.Size(205, 26);
@@ -115,11 +115,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UTM BryantLG", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
             this.label1.Location = new System.Drawing.Point(148, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 26);
+            this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 13;
             this.label1.Text = "Thêm hoá đơn";
             // 
@@ -138,6 +138,7 @@
             this.Controls.Add(this.tb_nhapSotien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "add_invoice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemHoaDon";
             this.ResumeLayout(false);
             this.PerformLayout();

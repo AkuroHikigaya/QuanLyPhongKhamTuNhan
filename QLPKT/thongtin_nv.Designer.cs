@@ -107,11 +107,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("UTM BryantLG", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
             this.label2.Location = new System.Drawing.Point(998, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 35);
+            this.label2.Size = new System.Drawing.Size(215, 32);
             this.label2.TabIndex = 50;
             this.label2.Text = "PHÒNG KHÁM";
             // 
@@ -133,7 +133,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(308, 22);
             this.textBox1.TabIndex = 48;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label3
@@ -186,11 +185,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("UTM BryantLG", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
             this.label1.Location = new System.Drawing.Point(922, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 36);
+            this.label1.Size = new System.Drawing.Size(307, 33);
             this.label1.TabIndex = 43;
             this.label1.Text = "Danh sách nhân viên";
             // 

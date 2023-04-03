@@ -34,9 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_printHd = new System.Windows.Forms.Button();
+            this.btn_delHd = new System.Windows.Forms.Button();
+            this.btn_editHd = new System.Windows.Forms.Button();
             this.hdDataTable = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -51,9 +51,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_printHd);
+            this.panel1.Controls.Add(this.btn_delHd);
+            this.panel1.Controls.Add(this.btn_editHd);
             this.panel1.Controls.Add(this.hdDataTable);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -77,25 +77,25 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("UTM BryantLG", 21.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label2.Location = new System.Drawing.Point(853, 65);
+            this.label2.Location = new System.Drawing.Point(910, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 36);
+            this.label2.Size = new System.Drawing.Size(158, 33);
             this.label2.TabIndex = 101;
-            this.label2.Text = "PHÒNG KHÁM";
+            this.label2.Text = "HÓA ĐƠN";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("UTM BryantLG", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(880, 35);
+            this.label1.Location = new System.Drawing.Point(967, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 30);
+            this.label1.Size = new System.Drawing.Size(101, 29);
             this.label1.TabIndex = 102;
-            this.label1.Text = "Thêm nhân viên";
+            this.label1.Text = "Quản lý";
             // 
             // pictureBox3
             // 
@@ -108,53 +108,57 @@
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // btn_printHd
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("UTM BryantLG", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(780, 625);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 45);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "In hóa đơn";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_printHd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_printHd.BackgroundImage")));
+            this.btn_printHd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_printHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_printHd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_printHd.ForeColor = System.Drawing.Color.White;
+            this.btn_printHd.Location = new System.Drawing.Point(803, 625);
+            this.btn_printHd.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_printHd.Name = "btn_printHd";
+            this.btn_printHd.Size = new System.Drawing.Size(164, 45);
+            this.btn_printHd.TabIndex = 11;
+            this.btn_printHd.Text = "In hóa đơn";
+            this.btn_printHd.UseVisualStyleBackColor = true;
+            this.btn_printHd.Click += new System.EventHandler(this.btn_printHd_Click);
             // 
-            // button2
+            // btn_delHd
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("UTM BryantLG", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(551, 625);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 45);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Xóa hóa đơn";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_delHd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_delHd.BackgroundImage")));
+            this.btn_delHd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_delHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delHd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delHd.ForeColor = System.Drawing.Color.White;
+            this.btn_delHd.Location = new System.Drawing.Point(551, 625);
+            this.btn_delHd.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_delHd.Name = "btn_delHd";
+            this.btn_delHd.Size = new System.Drawing.Size(164, 45);
+            this.btn_delHd.TabIndex = 10;
+            this.btn_delHd.Text = "Xóa hóa đơn";
+            this.btn_delHd.UseVisualStyleBackColor = true;
+            this.btn_delHd.Click += new System.EventHandler(this.btn_delHd_Click);
             // 
-            // button1
+            // btn_editHd
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("UTM BryantLG", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(311, 625);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 45);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Sửa hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_editHd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editHd.BackgroundImage")));
+            this.btn_editHd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editHd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editHd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editHd.ForeColor = System.Drawing.Color.White;
+            this.btn_editHd.Location = new System.Drawing.Point(287, 625);
+            this.btn_editHd.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_editHd.Name = "btn_editHd";
+            this.btn_editHd.Size = new System.Drawing.Size(164, 45);
+            this.btn_editHd.TabIndex = 9;
+            this.btn_editHd.Text = "Sửa hóa đơn";
+            this.btn_editHd.UseVisualStyleBackColor = true;
+            this.btn_editHd.Click += new System.EventHandler(this.btn_editHd_Click);
             // 
             // hdDataTable
             // 
+            this.hdDataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.hdDataTable.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.hdDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hdDataTable.Location = new System.Drawing.Point(179, 114);
@@ -190,9 +194,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_printHd;
+        private System.Windows.Forms.Button btn_delHd;
+        private System.Windows.Forms.Button btn_editHd;
         private System.Windows.Forms.DataGridView hdDataTable;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;

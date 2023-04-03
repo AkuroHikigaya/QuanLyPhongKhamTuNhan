@@ -96,7 +96,20 @@ namespace QLPKT
             ttnv.Show();
             this.Hide();
         }
-        
+
+        private void lichhen_Click(object sender, EventArgs e)
+        {
+            appointment ap = new appointment();
+            ap.Show();
+            this.Close();
+        }
+
+        private void panelLichHen_click(object sender, EventArgs e)
+        {
+            appointment ap = new appointment();
+            ap.Show();
+            this.Close();
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

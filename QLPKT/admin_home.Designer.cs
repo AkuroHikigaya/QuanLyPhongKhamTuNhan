@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lichhen = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.lb_logout = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label99 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -55,8 +60,9 @@
             this.lb_role = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lb_logout = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.bttn_toQLT.SuspendLayout();
@@ -74,6 +80,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.lb_logout);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.bttn_toQLT);
@@ -94,12 +102,78 @@
             this.panel1.Size = new System.Drawing.Size(738, 526);
             this.panel1.TabIndex = 13;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.lichhen);
+            this.panel3.Controls.Add(this.pictureBox8);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(413, 397);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(262, 75);
+            this.panel3.TabIndex = 49;
+            this.panel3.Click += new System.EventHandler(this.panelLichHen_click);
+            // 
+            // lichhen
+            // 
+            this.lichhen.AutoSize = true;
+            this.lichhen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lichhen.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lichhen.Location = new System.Drawing.Point(59, 25);
+            this.lichhen.Name = "lichhen";
+            this.lichhen.Size = new System.Drawing.Size(183, 25);
+            this.lichhen.TabIndex = 47;
+            this.lichhen.Text = "Quản lý lịch hẹn";
+            this.lichhen.Click += new System.EventHandler(this.lichhen_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Enabled = false;
+            this.pictureBox8.Location = new System.Drawing.Point(13, 18);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox8.TabIndex = 46;
+            this.pictureBox8.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Enabled = false;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(388, 385);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(336, 113);
+            this.button5.TabIndex = 48;
+            this.button5.Text = "Thêm";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // lb_logout
+            // 
+            this.lb_logout.AutoSize = true;
+            this.lb_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_logout.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lb_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lb_logout.Location = new System.Drawing.Point(581, 18);
+            this.lb_logout.Name = "lb_logout";
+            this.lb_logout.Size = new System.Drawing.Size(104, 24);
+            this.lb_logout.TabIndex = 22;
+            this.lb_logout.Text = "Đăng xuất";
+            this.lb_logout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lb_logout.Click += new System.EventHandler(this.lb_logout_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label99);
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(406, 391);
+            this.panel2.Location = new System.Drawing.Point(66, 397);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(262, 75);
             this.panel2.TabIndex = 21;
@@ -136,7 +210,7 @@
             this.bttn_toQLT.Controls.Add(this.label6);
             this.bttn_toQLT.Controls.Add(this.pictureBox6);
             this.bttn_toQLT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttn_toQLT.Location = new System.Drawing.Point(406, 258);
+            this.bttn_toQLT.Location = new System.Drawing.Point(413, 258);
             this.bttn_toQLT.Name = "bttn_toQLT";
             this.bttn_toQLT.Size = new System.Drawing.Size(262, 75);
             this.bttn_toQLT.TabIndex = 20;
@@ -172,7 +246,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(381, 378);
+            this.button4.Location = new System.Drawing.Point(41, 385);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(336, 113);
             this.button4.TabIndex = 19;
@@ -187,7 +261,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(381, 246);
+            this.button3.Location = new System.Drawing.Point(388, 246);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(336, 113);
             this.button3.TabIndex = 19;
@@ -200,7 +274,7 @@
             this.btn_toQLNV.Controls.Add(this.label4);
             this.btn_toQLNV.Controls.Add(this.pictureBox1);
             this.btn_toQLNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_toQLNV.Location = new System.Drawing.Point(53, 189);
+            this.btn_toQLNV.Location = new System.Drawing.Point(66, 126);
             this.btn_toQLNV.Name = "btn_toQLNV";
             this.btn_toQLNV.Size = new System.Drawing.Size(262, 75);
             this.btn_toQLNV.TabIndex = 20;
@@ -238,7 +312,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(28, 177);
+            this.button1.Location = new System.Drawing.Point(41, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(336, 113);
             this.button1.TabIndex = 19;
@@ -251,7 +325,7 @@
             this.btn_toTK.Controls.Add(this.label5);
             this.btn_toTK.Controls.Add(this.pictureBox4);
             this.btn_toTK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_toTK.Location = new System.Drawing.Point(53, 321);
+            this.btn_toTK.Location = new System.Drawing.Point(413, 126);
             this.btn_toTK.Name = "btn_toTK";
             this.btn_toTK.Size = new System.Drawing.Size(272, 75);
             this.btn_toTK.TabIndex = 20;
@@ -290,7 +364,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(28, 309);
+            this.button2.Location = new System.Drawing.Point(388, 114);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(336, 113);
             this.button2.TabIndex = 19;
@@ -303,7 +377,7 @@
             this.btn_toApp.Controls.Add(this.label3);
             this.btn_toApp.Controls.Add(this.pictureBox5);
             this.btn_toApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_toApp.Location = new System.Drawing.Point(406, 126);
+            this.btn_toApp.Location = new System.Drawing.Point(66, 258);
             this.btn_toApp.Name = "btn_toApp";
             this.btn_toApp.Size = new System.Drawing.Size(262, 75);
             this.btn_toApp.TabIndex = 20;
@@ -341,7 +415,7 @@
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Location = new System.Drawing.Point(381, 114);
+            this.btn1.Location = new System.Drawing.Point(41, 246);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(336, 113);
             this.btn1.TabIndex = 19;
@@ -413,21 +487,6 @@
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
-            // lb_logout
-            // 
-            this.lb_logout.AutoSize = true;
-            this.lb_logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_logout.Font = new System.Drawing.Font("UTM BryantLG", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_logout.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lb_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lb_logout.Location = new System.Drawing.Point(589, 18);
-            this.lb_logout.Name = "lb_logout";
-            this.lb_logout.Size = new System.Drawing.Size(100, 24);
-            this.lb_logout.TabIndex = 22;
-            this.lb_logout.Text = "Đăng xuất";
-            this.lb_logout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lb_logout.Click += new System.EventHandler(this.lb_logout_Click);
-            // 
             // admin_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,6 +500,9 @@
             this.Text = "admin_home";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -491,5 +553,9 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lb_logout;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lichhen;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button button5;
     }
 }

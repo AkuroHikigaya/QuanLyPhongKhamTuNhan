@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLPKT</RootNamespace>
     <AssemblyName>QLPKT</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +55,30 @@
     </Compile>
     <Compile Include="admin_home.Designer.cs">
       <DependentUpon>admin_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appointment.Designer.cs">
+      <DependentUpon>appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_appointment.Designer.cs">
+      <DependentUpon>edit_appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_hd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_hd.Designer.cs">
+      <DependentUpon>edit_hd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_invoice.Designer.cs">
+      <DependentUpon>edit_invoice.cs</DependentUpon>
     </Compile>
     <Compile Include="edit_nv.cs">
       <SubType>Form</SubType>
@@ -119,6 +146,18 @@
     <EmbeddedResource Include="admin_home.resx">
       <DependentUpon>admin_home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="appointment.resx">
+      <DependentUpon>appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_appointment.resx">
+      <DependentUpon>edit_appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_hd.resx">
+      <DependentUpon>edit_hd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_invoice.resx">
+      <DependentUpon>edit_invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="edit_nv.resx">
       <DependentUpon>edit_nv.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="invoice.resx">
       <DependentUpon>invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lich_hen.resx">
+      <DependentUpon>lich_hen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="patient_form.resx">
       <DependentUpon>patient_form.cs</DependentUpon>
@@ -156,6 +198,8 @@
     <EmbeddedResource Include="thongtin_nv.resx">
       <DependentUpon>thongtin_nv.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

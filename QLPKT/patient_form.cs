@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLPKT
 {
@@ -32,7 +33,6 @@ namespace QLPKT
         private void patient_form_Load(object sender, EventArgs e)
         {
             tb_nvId.Text = id;
-            tb_nvId.Enabled = false;
             conn = functions.connect();
             functions.display(bnDataTable, "Select a.BN_ID 'Mã bệnh nhân', a.BN_Ten 'Tên bệnh nhân', a.BN_NgaySinh 'Ngày sinh', a.BN_SDT 'Số điện thoại', a.BN_GioiTinh 'Giới tính', a.BN_DiaChi 'Địa chỉ', b.PK_TRIEUCHUNG 'Triệu chứng', b.PK_ID  From BENH_NHAN a, PHIEU_KHAM b Where a.BN_ID = b.BN_ID", conn);
             bnDataTable.Columns["PK_ID"].Visible = false;
@@ -47,51 +47,70 @@ namespace QLPKT
         //Thêm Bệnh Nhân
         private void btnThemBenhNhan_Click(object sender, EventArgs e)
         {
-            String BN_ID = tb_bnId.Text;
-            String BN_Ten = tb_bnTen.Text;
-            String BN_BHYT = tb_bnBHYT.Text;
-            String GiamHo = tb_bnGiamho.Text;
-            String CanCuoc = tb_bnCccd.Text;
-            String Sdt = tb_bnSdt.Text;
-            String NgaySinh = date_bnNgaysinh.Value.ToString("yyyy-MM-dd");
-            String DiaChi = tb_bnDiachi.Text;
-            String NV_ID = tb_nvId.Text;
-            String LK_ID = cb_lkId.SelectedValue.ToString();
-            String NgayLap = dt_pkNgaylap.Value.ToString("yyyy-MM-dd");
-            String TrieuChung = tb_pkTrieuchung.Text;
-            String query_ThemBenhNhan;
-            int rowCount;
-
-            SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM BENH_NHAN WHERE BN_ID = @value", conn);
-            sqlCommand.Parameters.AddWithValue("@value", BN_ID);
-
-            rowCount = (int)sqlCommand.ExecuteScalar();
-
-            if (rowCount > 0)
+            if(tb_bnId.Text != "" && tb_bnTen.Text != "" && tb_bnCccd.Text != "")
             {
-                DialogResult result = MessageBox.Show("Bệnh nhân đã có trong danh sách\n Bạn có muốn tiếp tục không ?", "Thông báo", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    functions.addPhieuKham(BN_ID, NV_ID, LK_ID, NgayLap, TrieuChung, conn);
-                    functions.display(bnDataTable, "Select a.BN_ID 'Mã bệnh nhân', a.BN_Ten 'Tên bệnh nhân', a.BN_NgaySinh 'Ngày sinh', a.BN_SDT 'Số điện thoại', a.BN_GioiTinh 'Giới tính', a.BN_DiaChi 'Địa chỉ', b.PK_TRIEUCHUNG 'Triệu chứng', b.PK_ID  From BENH_NHAN a, PHIEU_KHAM b Where a.BN_ID = b.BN_ID", conn);
+                String BN_ID = tb_bnId.Text;
+                String BN_Ten = tb_bnTen.Text;
+                String BN_BHYT = tb_bnBHYT.Text;
+                String GiamHo = tb_bnGiamho.Text;
+                String CanCuoc = tb_bnCccd.Text;
+                String Sdt = tb_bnSdt.Text;
+                String NgaySinh = date_bnNgaysinh.Value.ToString("yyyy-MM-dd");
+                String DiaChi = tb_bnDiachi.Text;
+                String NV_ID = tb_nvId.Text;
+                String LK_ID = cb_lkId.SelectedValue.ToString();
+                String NgayLap = dt_pkNgaylap.Value.ToString("yyyy-MM-dd");
+                String TrieuChung = tb_pkTrieuchung.Text;
+                String query_ThemBenhNhan;
+                int rowCount;
+                int have_nv;
 
+                SqlCommand checkNV = new SqlCommand("SELECT COUNT(*) FROM NHAN_VIEN WHERE NV_ID = @value", conn);
+                checkNV.Parameters.AddWithValue("@value", NV_ID);
+
+                have_nv = (int)checkNV.ExecuteScalar();
+                if (have_nv > 0) 
+                {
+                    SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM BENH_NHAN WHERE BN_ID = @value", conn);
+                    sqlCommand.Parameters.AddWithValue("@value", BN_ID);
+
+                    rowCount = (int)sqlCommand.ExecuteScalar();
+
+                    if (rowCount > 0)
+                    {
+                        DialogResult result = MessageBox.Show("Bệnh nhân đã có trong danh sách\n Bạn có muốn tiếp tục không ?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            functions.addPhieuKham(BN_ID, NV_ID, LK_ID, NgayLap, TrieuChung, conn);
+                            functions.display(bnDataTable, "Select a.BN_ID 'Mã bệnh nhân', a.BN_Ten 'Tên bệnh nhân', a.BN_NgaySinh 'Ngày sinh', a.BN_SDT 'Số điện thoại', a.BN_GioiTinh 'Giới tính', a.BN_DiaChi 'Địa chỉ', b.PK_TRIEUCHUNG 'Triệu chứng', b.PK_ID  From BENH_NHAN a, PHIEU_KHAM b Where a.BN_ID = b.BN_ID", conn);
+
+                        }
+                    }
+                    else
+                    {
+                        if (male.Checked)
+                        {
+                            query_ThemBenhNhan = "Insert into BENH_NHAN values('" + BN_ID + "', N'" + BN_Ten + "', '" + BN_BHYT + "', N'" + GiamHo + "', '" + CanCuoc + "', '" + NgaySinh + "', '" + Sdt + "', 'Nam', N'" + DiaChi + "')";
+                        }
+                        else
+                        {
+                            query_ThemBenhNhan = "Insert into BENH_NHAN values('" + BN_ID + "', N'" + BN_Ten + "', '" + BN_BHYT + "', N'" + GiamHo + "', '" + CanCuoc + "', '" + NgaySinh + "', '" + Sdt + "', N'Nữ', N'" + DiaChi + "')";
+                        }
+                        functions.compileSql(query_ThemBenhNhan, conn);
+                        functions.addPhieuKham(BN_ID, NV_ID, LK_ID, NgayLap, TrieuChung, conn);
+                        MessageBox.Show("Đã thêm bệnh nhân");
+                        functions.display(bnDataTable, "Select a.BN_ID 'Mã bệnh nhân', a.BN_Ten 'Tên bệnh nhân', a.BN_NgaySinh 'Ngày sinh', a.BN_SDT 'Số điện thoại', a.BN_GioiTinh 'Giới tính', a.BN_DiaChi 'Địa chỉ', b.PK_TRIEUCHUNG 'Triệu chứng', b.PK_ID  From BENH_NHAN a, PHIEU_KHAM b Where a.BN_ID = b.BN_ID", conn);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Thông tin nhân viên không chính xác !");
                 }
             }
             else
             {
-                if (male.Checked)
-                {
-                    query_ThemBenhNhan = "Insert into BENH_NHAN values('" + BN_ID + "', N'" + BN_Ten + "', '" + BN_BHYT + "', N'" + GiamHo + "', '" + CanCuoc + "', '" + NgaySinh + "', '" + Sdt + "', 'Nam', N'" + DiaChi + "')";
-                }
-                else
-                {
-                    query_ThemBenhNhan = "Insert into BENH_NHAN values('" + BN_ID + "', N'" + BN_Ten + "', '" + BN_BHYT + "', N'" + GiamHo + "', '" + CanCuoc + "', '" + NgaySinh + "', '" + Sdt + "', N'Nữ', N'" + DiaChi + "')";
-                }
-                functions.compileSql(query_ThemBenhNhan, conn);
-                functions.addPhieuKham(BN_ID, NV_ID, LK_ID, NgayLap, TrieuChung, conn);
-                MessageBox.Show("Đã thêm bệnh nhân");
-                functions.display(bnDataTable, "Select a.BN_ID 'Mã bệnh nhân', a.BN_Ten 'Tên bệnh nhân', a.BN_NgaySinh 'Ngày sinh', a.BN_SDT 'Số điện thoại', a.BN_GioiTinh 'Giới tính', a.BN_DiaChi 'Địa chỉ', b.PK_TRIEUCHUNG 'Triệu chứng', b.PK_ID  From BENH_NHAN a, PHIEU_KHAM b Where a.BN_ID = b.BN_ID", conn);
-
+                MessageBox.Show("Hãy nhập đầy đủ thông tin !");
             }
         }
 
@@ -153,25 +172,35 @@ namespace QLPKT
 
         private void btnLapHoaDon_Click(object sender, EventArgs e)
         {
-            /*
             DataGridViewRow row = bnDataTable.SelectedRows[0];
             string idPhieuKham = row.Cells["PK_ID"].Value.ToString();
-            add_invoice hd = new add_invoice(idPhieuKham, hdDataTable);
-            hd.Show();*/
+            add_invoice hd = new add_invoice(idPhieuKham);
+            hd.Show();
         }
 
         private void bnDataTable_DoubleClick(object sender, EventArgs e)
         {
-            phieu_kham pk = new phieu_kham();
+            DataGridViewRow row = bnDataTable.SelectedRows[0];
+            string idPhieuKham = row.Cells["PK_ID"].Value.ToString();
+            phieu_kham pk = new phieu_kham(idPhieuKham);
             pk.Show();
         }
 
+        private void BN_TimKiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                    functions.display(bnDataTable, "SELECT a.BN_ID 'Mã bệnh nhân', a.BN_Ten 'Tên bệnh nhân', a.BN_NgaySinh 'Ngày sinh', a.BN_SDT 'Số điện thoại', a.BN_GioiTinh 'Giới tính', a.BN_DiaChi 'Địa chỉ', b.PK_TRIEUCHUNG 'Triệu chứng', b.PK_ID FROM BENH_NHAN a, PHIEU_KHAM b WHERE a.BN_ID = b.BN_ID AND (a.BN_ID LIKE '%" + tb_search.Text + "%' OR a.BN_Ten LIKE N'%" + tb_search.Text + "%' OR a.BN_NgaySinh LIKE '%" + tb_search.Text + "%' OR a.BN_SDT LIKE '%" + tb_search.Text + "%' OR a.BN_GioiTinh LIKE N'%"+ tb_search.Text + "%' OR a.BN_DiaChi LIKE N'%" + tb_search.Text + "%' OR b.PK_TRIEUCHUNG LIKE N'%" + tb_search.Text + "%')", conn);
+            }
+        }
         private void addLichHen_Click(object sender, EventArgs e)
         {
-            lich_hen lh = new lich_hen();
+            DataGridViewRow row = bnDataTable.SelectedRows[0];
+            string id_BN = row.Cells[0].Value.ToString();
+            string name_BN = row.Cells[1].Value.ToString();
+            lich_hen lh = new lich_hen(id_BN, name_BN);
             lh.Show();
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             admin_home adm = new admin_home(id, name, role);
