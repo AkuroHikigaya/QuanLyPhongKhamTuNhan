@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QLPKT
 {
@@ -60,6 +61,35 @@ namespace QLPKT
                 gioitinh = "Nữ";
             }
         }
+
+        private string fileName;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.gif) | *.jpg; *.jpeg; *.png; *.gif";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                // Load the selected image into the PictureBox control
+                pictureBox10.Image = Image.FromFile(dialog.FileName);
+                pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+
+                // Save the image to a folder in the project directory
+                string projectPath = Application.StartupPath;
+                string imagePath = projectPath + @"\ProFile_Images\"; // Change this to the subfolder path you want to use
+
+                if (!Directory.Exists(imagePath))
+                {
+                    Directory.CreateDirectory(imagePath);
+                }
+
+                fileName = new Random().Next(9999).ToString() + "_" + Path.GetFileName(dialog.FileName) ;
+                string filePath = imagePath + fileName;
+                pictureBox10.Image.Save(filePath);
+                textBox11.Text = fileName;
+            }
+        }
+
 
         private void btn_login_Click(object sender, EventArgs e)
         {

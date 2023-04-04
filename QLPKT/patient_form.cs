@@ -199,7 +199,10 @@ namespace QLPKT
             string id_BN = row.Cells[0].Value.ToString();
             string name_BN = row.Cells[1].Value.ToString();
             lich_hen lh = new lich_hen(id_BN, name_BN);
-            lh.Show();
+            this.Opacity = 0.7;
+            lh.ShowDialog();
+            this.Opacity = 1;
+
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {

@@ -38,6 +38,8 @@
             this.btn_delHd = new System.Windows.Forms.Button();
             this.btn_editHd = new System.Windows.Forms.Button();
             this.hdDataTable = new System.Windows.Forms.DataGridView();
+            this.pdfHoaDonDoc = new System.Drawing.Printing.PrintDocument();
+            this.pdfHoaDon = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -171,6 +173,20 @@
             this.hdDataTable.Size = new System.Drawing.Size(889, 483);
             this.hdDataTable.TabIndex = 8;
             // 
+            // pdfHoaDonDoc
+            // 
+            this.pdfHoaDonDoc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdfHoaDonDoc_PrintPage);
+            // 
+            // pdfHoaDon
+            // 
+            this.pdfHoaDon.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.pdfHoaDon.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.pdfHoaDon.ClientSize = new System.Drawing.Size(400, 300);
+            this.pdfHoaDon.Enabled = true;
+            this.pdfHoaDon.Icon = ((System.Drawing.Icon)(resources.GetObject("pdfHoaDon.Icon")));
+            this.pdfHoaDon.Name = "printPreviewDialog1";
+            this.pdfHoaDon.Visible = false;
+            // 
             // invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,5 +218,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Drawing.Printing.PrintDocument pdfHoaDonDoc;
+        private System.Windows.Forms.PrintPreviewDialog pdfHoaDon;
     }
 }

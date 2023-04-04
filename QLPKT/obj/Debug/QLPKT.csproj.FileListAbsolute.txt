@@ -76,3 +76,9 @@ E:\Now_HK\LTUD\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.lich_hen.resources
 E:\Now_HK\LTUD\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.appointment.resources
 E:\Now_HK\LTUD\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.edit_appointment.resources
 E:\Now_HK\LTUD\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.edit_invoice.resources
+D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\bin\Debug\BouncyCastle.Crypto.dll
+D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.appointment.resources
+D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.edit_appointment.resources
+D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.edit_hd.resources
+D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.edit_invoice.resources
+D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.lich_hen.resources
