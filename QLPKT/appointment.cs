@@ -22,6 +22,15 @@ namespace QLPKT
             InitializeComponent();
         }
 
+        private string id, name, role;
+        public appointment(string id, string name, string role)
+        {
+            InitializeComponent();
+            this.id = id;
+            this.name = name;
+            this.role = role;
+        }
+
         private void appointment_Load(object sender, EventArgs e)
         {
             conn = functions.connect();
@@ -30,7 +39,9 @@ namespace QLPKT
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            admin_home adm = new admin_home(id, name, role);
+            adm.Show();
+            this.Close();
         }
 
         private void btn_delHd_Click(object sender, EventArgs e)

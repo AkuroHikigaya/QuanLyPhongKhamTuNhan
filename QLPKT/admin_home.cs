@@ -99,14 +99,14 @@ namespace QLPKT
 
         private void lichhen_Click(object sender, EventArgs e)
         {
-            appointment ap = new appointment();
+            appointment ap = new appointment(id, name, role);
             ap.Show();
             this.Close();
         }
 
         private void panelLichHen_click(object sender, EventArgs e)
         {
-            appointment ap = new appointment();
+            appointment ap = new appointment(id, name, role);
             ap.Show();
             this.Close();
         }

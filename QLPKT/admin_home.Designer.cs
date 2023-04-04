@@ -210,7 +210,7 @@
             this.bttn_toQLT.Controls.Add(this.label6);
             this.bttn_toQLT.Controls.Add(this.pictureBox6);
             this.bttn_toQLT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttn_toQLT.Location = new System.Drawing.Point(413, 258);
+            this.bttn_toQLT.Location = new System.Drawing.Point(413, 262);
             this.bttn_toQLT.Name = "bttn_toQLT";
             this.bttn_toQLT.Size = new System.Drawing.Size(262, 75);
             this.bttn_toQLT.TabIndex = 20;
@@ -261,7 +261,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(388, 246);
+            this.button3.Location = new System.Drawing.Point(388, 250);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(336, 113);
             this.button3.TabIndex = 19;
@@ -377,7 +377,7 @@
             this.btn_toApp.Controls.Add(this.label3);
             this.btn_toApp.Controls.Add(this.pictureBox5);
             this.btn_toApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_toApp.Location = new System.Drawing.Point(66, 258);
+            this.btn_toApp.Location = new System.Drawing.Point(66, 262);
             this.btn_toApp.Name = "btn_toApp";
             this.btn_toApp.Size = new System.Drawing.Size(262, 75);
             this.btn_toApp.TabIndex = 20;
@@ -415,7 +415,7 @@
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Location = new System.Drawing.Point(41, 246);
+            this.btn1.Location = new System.Drawing.Point(41, 250);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(336, 113);
             this.btn1.TabIndex = 19;
