@@ -2017,7 +2017,6 @@
         AQAAAADgG4jIP//88z+2p6KBg/MEjQAAAABJRU5ErkJggg==
 </value>
   </data>
-
   <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABsoAAAJwCAYAAAAgHjTRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
@@ -2837,6 +2836,7 @@
         AQAAAADgG4jIP//88z+2p6KBg/MEjQAAAABJRU5ErkJggg==
 </value>
   </data>
+
   <data name="button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABsoAAAJwCAYAAAAgHjTRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
