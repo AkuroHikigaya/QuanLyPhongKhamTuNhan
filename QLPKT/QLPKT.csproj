@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLPKT</RootNamespace>
     <AssemblyName>QLPKT</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -145,6 +145,7 @@
     </Compile>
     <EmbeddedResource Include="admin_home.resx">
       <DependentUpon>admin_home.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="appointment.resx">
       <DependentUpon>appointment.cs</DependentUpon>

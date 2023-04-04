@@ -57,7 +57,35 @@ namespace QLPKT
 
         private void btn_printHd_Click(object sender, EventArgs e)
         {
+            pdfHoaDon.Document = pdfHoaDonDoc;
+            pdfHoaDon.ShowDialog();
+        }
+
+        private void pdfHoaDonDoc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            DataGridViewRow row = hdDataTable.SelectedRows[0];
+            string idHD = row.Cells[0].Value.ToString();
+            string ten = "Name";
+            string sdt = "SDT";
+
+            var w = pdfHoaDonDoc.DefaultPageSettings.PaperSize.Width;
+            Pen blackpen = new Pen(Color.Black,1);
+            var y = 20;
+
+            //Hàng 1
+            e.Graphics.DrawString("PHÒNG KHÁM TAI ƯƠNG", new Font("Courier New", 12, FontStyle.Bold), Brushes.Black, new Point(100, y));
+            e.Graphics.DrawString("ID HÓA ĐƠN: "+ idHD, new Font("Courier New", 12, FontStyle.Bold), Brushes.Black, new Point(w/2 + 200, y));
+            y += 25;
+            //Hàng 2
+            e.Graphics.DrawString("Khu 2, Đ. 3/2, P. Xuân Khánh, \nQ. Ninh Kiều, TP. CT", new Font("Courier New", 12, FontStyle.Bold), Brushes.Black, new Point(100, y));
+            e.Graphics.DrawString(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), new Font("Courier New", 12, FontStyle.Bold), Brushes.Black, new Point(w / 2 + 200, y));
+            y += 50;
+            //Gạch
             
+            Point p1 = new Point(10, y);
+            Point p2 = new Point(w-10, y);
+            e.Graphics.DrawLine(blackpen, p1, p2);
+
         }
 
         private void invoice_Load(object sender, EventArgs e)
