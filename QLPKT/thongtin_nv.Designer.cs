@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thongtin_nv));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pn_overlay = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,9 +44,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pn_overlay = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.picb_avt = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -70,14 +71,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.pn_overlay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.pn_overlay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_avt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +106,45 @@
             this.panel1.Size = new System.Drawing.Size(1229, 706);
             this.panel1.TabIndex = 16;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(535, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 13);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "label16";
+            // 
+            // pn_overlay
+            // 
+            this.pn_overlay.Controls.Add(this.label15);
+            this.pn_overlay.Controls.Add(this.pictureBox4);
+            this.pn_overlay.Location = new System.Drawing.Point(99, 257);
+            this.pn_overlay.Name = "pn_overlay";
+            this.pn_overlay.Size = new System.Drawing.Size(871, 228);
+            this.pn_overlay.TabIndex = 52;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label15.Location = new System.Drawing.Point(190, 94);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(454, 31);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Thông tin nhân viên sẽ hiển thị ở đây";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(105, 76);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -114,7 +153,7 @@
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
             this.label2.Location = new System.Drawing.Point(998, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 32);
+            this.label2.Size = new System.Drawing.Size(215, 32);
             this.label2.TabIndex = 50;
             this.label2.Text = "PHÒNG KHÁM";
             // 
@@ -228,36 +267,6 @@
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
-            // 
-            // pn_overlay
-            // 
-            this.pn_overlay.Controls.Add(this.label15);
-            this.pn_overlay.Controls.Add(this.pictureBox4);
-            this.pn_overlay.Location = new System.Drawing.Point(99, 257);
-            this.pn_overlay.Name = "pn_overlay";
-            this.pn_overlay.Size = new System.Drawing.Size(871, 228);
-            this.pn_overlay.TabIndex = 52;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label15.Location = new System.Drawing.Point(190, 94);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(454, 31);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Thông tin nhân viên sẽ hiển thị ở đây";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(105, 76);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // picb_avt
             // 
@@ -582,15 +591,7 @@
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(535, 27);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 53;
-            this.label16.Text = "label16";
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentDoubleClick);
             // 
             // thongtin_nv
             // 
@@ -604,14 +605,14 @@
             this.Text = "thongtin_nv";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pn_overlay.ResumeLayout(false);
+            this.pn_overlay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.pn_overlay.ResumeLayout(false);
-            this.pn_overlay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picb_avt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

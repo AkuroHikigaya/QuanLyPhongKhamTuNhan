@@ -51,7 +51,8 @@ namespace QLPKT
                 i++;
             }
             lb_tongHD.Text += counthd;
-            lb_tongDT.Text += countdt;
+            lb_tongDT.Text += countdt + " VNĐ";
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -161,6 +161,7 @@
             this.btn_toTK.Name = "btn_toTK";
             this.btn_toTK.Size = new System.Drawing.Size(272, 75);
             this.btn_toTK.TabIndex = 53;
+            this.btn_toTK.Click += new System.EventHandler(this.btn_toTK_Click);
             // 
             // label5
             // 
@@ -172,6 +173,7 @@
             this.label5.Size = new System.Drawing.Size(222, 25);
             this.label5.TabIndex = 47;
             this.label5.Text = "Thống kê doanh thu";
+            this.label5.Click += new System.EventHandler(this.btn_toTK_Click);
             // 
             // pictureBox4
             // 

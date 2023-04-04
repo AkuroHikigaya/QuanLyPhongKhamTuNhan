@@ -102,6 +102,27 @@ namespace QLPKT
 
         }
 
+        private void DataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Lấy dữ liệu từ dòng được chọn
+            DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+            string manv = selectedRow.Cells[0].Value.ToString();
+            string tennv = selectedRow.Cells[2].Value.ToString();
+            string ngaysinh = selectedRow.Cells[3].Value.ToString();
+            string gioitinh = selectedRow.Cells[4].Value.ToString();
+            string email = selectedRow.Cells[5].Value.ToString();
+            string sdt = selectedRow.Cells[6].Value.ToString();
+            string chucvu = selectedRow.Cells[8].Value.ToString();
+            string taikhoan = selectedRow.Cells[9].Value.ToString();
+            string matkhau = selectedRow.Cells[10].Value.ToString();
+            string quyenhan = selectedRow.Cells[11].Value.ToString();
+            string bangcap = selectedRow.Cells[7].Value.ToString();
+            string chuyenmon = selectedRow.Cells[8].Value.ToString();
+
+            // Mở form edit_nv
+            edit_nv frm = new edit_nv(manv, tennv, ngaysinh, gioitinh, email, sdt, taikhoan, matkhau, quyenhan, bangcap, chuyenmon, chucvu, id, name, role);
+            frm.ShowDialog();
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             edit_nv edit = new edit_nv(id, name, role);
