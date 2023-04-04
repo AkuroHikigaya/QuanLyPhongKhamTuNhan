@@ -63,7 +63,9 @@ namespace QLPKT
             string idBN = row.Cells[1].Value.ToString();
             string nameBN = row.Cells[2].Value.ToString();
             edit_appointment ea = new edit_appointment(idBN, nameBN, lhDataTable);
-            ea.Show();
+            this.Opacity = 0.8;
+            ea.ShowDialog();
+            this.Opacity = 1;
 
         }
     }
