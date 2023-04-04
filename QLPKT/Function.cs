@@ -84,11 +84,11 @@ namespace QLPKT
             ColorMatrix grayMatrix = new ColorMatrix(
                 new float[][]
                 {
-            new float[] {0.299f, 0.299f, 0.299f, 0, 0},
-            new float[] {0.587f, 0.587f, 0.587f, 0, 0},
-            new float[] {0.114f, 0.114f, 0.114f, 0, 0},
-            new float[] {0,      0,      0,      1, 0},
-            new float[] {0,      0,      0,      0, 1}
+                    new float[] {0.299f, 0.299f, 0.299f, 0, 0},
+                    new float[] {0.587f, 0.587f, 0.587f, 0, 0},
+                    new float[] {0.114f, 0.114f, 0.114f, 0, 0},
+                    new float[] {0,      0,      0,      1, 0},
+                    new float[] {0,      0,      0,      0, 1}
                 });
 
             // Thiết lập thuộc tính ColorMatrix cho đối tượng ImageAttributes

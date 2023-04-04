@@ -80,6 +80,15 @@ namespace QLPKT
 
         }
 
+
+        private void btn_toQLNV_Click_1(object sender, EventArgs e)
+        {
+            thongtin_nv ttnv = new thongtin_nv(id, name, role);
+            ttnv.Tag = tagValue;
+            ttnv.Show();
+            this.Hide();
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
             thongtin_nv ttnv = new thongtin_nv(id, name, role);
@@ -110,7 +119,7 @@ namespace QLPKT
             ap.Show();
             this.Close();
         }
-        
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

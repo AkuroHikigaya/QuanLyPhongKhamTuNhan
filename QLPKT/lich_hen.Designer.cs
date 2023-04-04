@@ -224,6 +224,7 @@
             this.Controls.Add(this.lb_mBN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "lich_hen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "lich_hen";
             this.Load += new System.EventHandler(this.lich_hen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
