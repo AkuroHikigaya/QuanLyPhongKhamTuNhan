@@ -64,7 +64,7 @@ namespace QLPKT
             {
                 picb_avt.Image = Image.FromFile(imagePath = Path.Combine("ProFile_Images", "default.png"));
             }
-            picb_avt.BackgroundImageLayout = ImageLayout.Zoom;
+            picb_avt.BackgroundImageLayout = ImageLayout.Stretch;
 
 
         }
