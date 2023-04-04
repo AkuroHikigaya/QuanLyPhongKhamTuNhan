@@ -14,7 +14,6 @@ namespace QLPKT
     public partial class add_invoice : Form
     {
         private string idPhieuKham;
-        private DataGridView hdDataTable;
         Function functions = new Function();
         SqlConnection conn;
         public add_invoice(string idPhieuKham)

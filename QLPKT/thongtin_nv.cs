@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
 
 namespace QLPKT
 {
@@ -53,6 +54,18 @@ namespace QLPKT
             textBox9.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             textBox10.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             textBox11.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            label16.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            string imagePath = Path.Combine("ProFile_Images", dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
+            if (File.Exists(imagePath))
+            {
+                picb_avt.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                picb_avt.Image = Image.FromFile(imagePath = Path.Combine("ProFile_Images", "default.png"));
+            }
+            picb_avt.BackgroundImageLayout = ImageLayout.Zoom;
+
 
         }
 

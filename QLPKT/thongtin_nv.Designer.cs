@@ -43,7 +43,7 @@
             this.pn_overlay = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picb_avt = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -70,6 +70,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -77,13 +78,15 @@
             this.groupBox1.SuspendLayout();
             this.pn_overlay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_avt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.pn_overlay);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.textBox1);
@@ -111,7 +114,7 @@
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
             this.label2.Location = new System.Drawing.Point(998, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 32);
+            this.label2.Size = new System.Drawing.Size(216, 32);
             this.label2.TabIndex = 50;
             this.label2.Text = "PHÒNG KHÁM";
             // 
@@ -195,8 +198,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pn_overlay);
-            this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Controls.Add(this.picb_avt);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label13);
@@ -231,7 +233,7 @@
             // 
             this.pn_overlay.Controls.Add(this.label15);
             this.pn_overlay.Controls.Add(this.pictureBox4);
-            this.pn_overlay.Location = new System.Drawing.Point(1, 0);
+            this.pn_overlay.Location = new System.Drawing.Point(99, 257);
             this.pn_overlay.Name = "pn_overlay";
             this.pn_overlay.Size = new System.Drawing.Size(871, 228);
             this.pn_overlay.TabIndex = 52;
@@ -257,14 +259,16 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
+            // picb_avt
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(16, 37);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(139, 164);
-            this.pictureBox3.TabIndex = 52;
-            this.pictureBox3.TabStop = false;
+            this.picb_avt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picb_avt.BackgroundImage")));
+            this.picb_avt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picb_avt.Location = new System.Drawing.Point(16, 37);
+            this.picb_avt.Margin = new System.Windows.Forms.Padding(2);
+            this.picb_avt.Name = "picb_avt";
+            this.picb_avt.Size = new System.Drawing.Size(139, 164);
+            this.picb_avt.TabIndex = 52;
+            this.picb_avt.TabStop = false;
             // 
             // label14
             // 
@@ -579,6 +583,15 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(535, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 13);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "label16";
+            // 
             // thongtin_nv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,7 +612,7 @@
             this.pn_overlay.ResumeLayout(false);
             this.pn_overlay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_avt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -643,9 +656,10 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picb_avt;
         private System.Windows.Forms.Panel pn_overlay;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label16;
     }
 }
