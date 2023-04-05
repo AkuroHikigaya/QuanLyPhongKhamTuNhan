@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QLPKT
 {
@@ -18,10 +19,6 @@ namespace QLPKT
         public SqlConnection conn;
         public void ketnoi()
         {
-            //string chuoiketnoi = "SERVER = DESKTOP-33H3AUS ; database = QLPKTN; Integrated Security = True; MultipleActiveResultSets = true";
-            //conn = new SqlConnection();
-            //conn.ConnectionString = chuoiketnoi;
-            //conn.Open();
             Function f = new Function();
             conn = f.connect();
         }
@@ -37,11 +34,12 @@ namespace QLPKT
         private string quyenhan;
         private string bangcap;
         private string chuyenmon;
+        private string anh;
 
 
         private string id, name, role;
 
-        public edit_nv(string manv, string tennv, string ngaysinh, string gioitinh, string email, string sdt, string taikhoan, string matkhau, string quyenhan, string bangcap, string chuyenmon, string chucvu, string id, string name, string role)
+        public edit_nv(string manv, string tennv, string ngaysinh, string gioitinh, string email, string sdt, string taikhoan, string matkhau, string quyenhan, string bangcap, string chuyenmon, string chucvu, string anh, string id, string name, string role)
         {
             InitializeComponent();
             this.id = id;
@@ -60,6 +58,7 @@ namespace QLPKT
             this.quyenhan = quyenhan;
             this.bangcap = bangcap;
             this.chuyenmon = chuyenmon;
+            this.anh = anh;
 
 
             Function f = new Function();
@@ -81,6 +80,12 @@ namespace QLPKT
             textBox21.Text = matkhau;
             textBox14.Text = bangcap;
             textBox19.Text = chuyenmon;
+
+            string projectPath = Application.StartupPath;
+            string imagePath = projectPath + @"\ProFile_Images\";
+            string filePath = imagePath + anh;
+            pictureBox10.Image = Image.FromFile(filePath);
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
 
@@ -101,6 +106,35 @@ namespace QLPKT
             thongtin_nv tt = new thongtin_nv(id, name, role);
             tt.Show();
             this.Hide();
+        }
+
+
+        private string fileName;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files (*.jpg, *.jpeg, *.png, *.gif) | *.jpg; *.jpeg; *.png; *.gif";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                // Load the selected image into the PictureBox control
+                pictureBox10.Image = Image.FromFile(dialog.FileName);
+                pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+
+                // Save the image to a folder in the project directory
+                string projectPath = Application.StartupPath;
+                string imagePath = projectPath + @"\ProFile_Images\"; // Change this to the subfolder path you want to use
+
+                if (!Directory.Exists(imagePath))
+                {
+                    Directory.CreateDirectory(imagePath);
+                }
+
+                fileName = new Random().Next(9999).ToString() + "_" + Path.GetFileName(dialog.FileName);
+                string filePath = imagePath + fileName;
+                pictureBox10.Image.Save(filePath);
+                textBox11.Text = fileName;
+            }
         }
 
         private void btn_login_Click(object sender, EventArgs e)

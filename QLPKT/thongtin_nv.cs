@@ -41,8 +41,26 @@ namespace QLPKT
             this.role = role;
         }
 
+
+        private string manv, tennv, ngaysinh, gioitinh, email, sdt, chucvu, taikhoan, matkhau, quyenhan, bangcap, chuyenmon, anh;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+            manv = selectedRow.Cells[0].Value.ToString();
+            tennv = selectedRow.Cells[2].Value.ToString();
+            ngaysinh = selectedRow.Cells[3].Value.ToString();
+            gioitinh = selectedRow.Cells[4].Value.ToString();
+            email = selectedRow.Cells[5].Value.ToString();
+            sdt = selectedRow.Cells[6].Value.ToString();
+            chucvu = selectedRow.Cells[1].Value.ToString();
+            taikhoan = selectedRow.Cells[9].Value.ToString();
+            matkhau = selectedRow.Cells[10].Value.ToString();
+            quyenhan = selectedRow.Cells[11].Value.ToString();
+            bangcap = selectedRow.Cells[7].Value.ToString();
+            chuyenmon = selectedRow.Cells[8].Value.ToString();
+            anh = selectedRow.Cells[12].Value.ToString();
+
+
             pn_overlay.Visible = false;
             textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -54,7 +72,7 @@ namespace QLPKT
             textBox9.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             textBox10.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             textBox11.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            label16.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+
             string imagePath = Path.Combine("ProFile_Images", dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
             if (File.Exists(imagePath))
             {
@@ -106,28 +124,30 @@ namespace QLPKT
         {
             // Lấy dữ liệu từ dòng được chọn
             DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-            string manv = selectedRow.Cells[0].Value.ToString();
-            string tennv = selectedRow.Cells[2].Value.ToString();
-            string ngaysinh = selectedRow.Cells[3].Value.ToString();
-            string gioitinh = selectedRow.Cells[4].Value.ToString();
-            string email = selectedRow.Cells[5].Value.ToString();
-            string sdt = selectedRow.Cells[6].Value.ToString();
-            string chucvu = selectedRow.Cells[8].Value.ToString();
-            string taikhoan = selectedRow.Cells[9].Value.ToString();
-            string matkhau = selectedRow.Cells[10].Value.ToString();
-            string quyenhan = selectedRow.Cells[11].Value.ToString();
-            string bangcap = selectedRow.Cells[7].Value.ToString();
-            string chuyenmon = selectedRow.Cells[8].Value.ToString();
+            manv = selectedRow.Cells[0].Value.ToString();
+            tennv = selectedRow.Cells[2].Value.ToString();
+            ngaysinh = selectedRow.Cells[3].Value.ToString();
+            gioitinh = selectedRow.Cells[4].Value.ToString();
+            email = selectedRow.Cells[5].Value.ToString();
+            sdt = selectedRow.Cells[6].Value.ToString();
+            chucvu = selectedRow.Cells[1].Value.ToString();
+            taikhoan = selectedRow.Cells[9].Value.ToString();
+            matkhau = selectedRow.Cells[10].Value.ToString();
+            quyenhan = selectedRow.Cells[11].Value.ToString();
+            bangcap = selectedRow.Cells[7].Value.ToString();
+            chuyenmon = selectedRow.Cells[8].Value.ToString();
+            anh = selectedRow.Cells[12].Value.ToString();
+
 
             // Mở form edit_nv
-            edit_nv frm = new edit_nv(manv, tennv, ngaysinh, gioitinh, email, sdt, taikhoan, matkhau, quyenhan, bangcap, chuyenmon, chucvu, id, name, role);
-            frm.ShowDialog();
+            edit_nv frm = new edit_nv(manv, tennv, ngaysinh, gioitinh, email, sdt, taikhoan, matkhau, quyenhan, bangcap, chuyenmon, chucvu, anh, id, name, role);
+            frm.Show();
+            this.Hide();
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            edit_nv edit = new edit_nv(id, name, role);
-            edit.Tag = this.Tag;
-            edit.Show();
+            edit_nv frm = new edit_nv(manv, tennv, ngaysinh, gioitinh, email, sdt, taikhoan, matkhau, quyenhan, bangcap, chuyenmon, chucvu, anh, id, name, role);
+            frm.Show();
             this.Hide();
         }
 

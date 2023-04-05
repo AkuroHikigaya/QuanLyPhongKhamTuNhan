@@ -472,7 +472,7 @@
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
             this.label2.Location = new System.Drawing.Point(762, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 36);
+            this.label2.Size = new System.Drawing.Size(215, 36);
             this.label2.TabIndex = 14;
             this.label2.Text = "PHÒNG KHÁM";
             // 
@@ -484,7 +484,7 @@
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
             this.label1.Location = new System.Drawing.Point(706, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 30);
+            this.label1.Size = new System.Drawing.Size(271, 30);
             this.label1.TabIndex = 15;
             this.label1.Text = "Sửa thông tin nhân viên";
             // 
@@ -613,6 +613,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Tải ảnh đại diện";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 

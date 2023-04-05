@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thongtin_nv));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
             this.pn_overlay = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -85,7 +84,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.pn_overlay);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -106,20 +104,11 @@
             this.panel1.Size = new System.Drawing.Size(1229, 706);
             this.panel1.TabIndex = 16;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(535, 27);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 53;
-            this.label16.Text = "label16";
-            // 
             // pn_overlay
             // 
             this.pn_overlay.Controls.Add(this.label15);
             this.pn_overlay.Controls.Add(this.pictureBox4);
-            this.pn_overlay.Location = new System.Drawing.Point(99, 257);
+            this.pn_overlay.Location = new System.Drawing.Point(221, 213);
             this.pn_overlay.Name = "pn_overlay";
             this.pn_overlay.Size = new System.Drawing.Size(871, 228);
             this.pn_overlay.TabIndex = 52;
@@ -153,7 +142,7 @@
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
             this.label2.Location = new System.Drawing.Point(998, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 32);
+            this.label2.Size = new System.Drawing.Size(216, 32);
             this.label2.TabIndex = 50;
             this.label2.Text = "PHÒNG KHÁM";
             // 
@@ -661,6 +650,5 @@
         private System.Windows.Forms.Panel pn_overlay;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label16;
     }
 }
