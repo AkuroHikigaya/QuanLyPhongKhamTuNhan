@@ -81,11 +81,20 @@ namespace QLPKT
             textBox14.Text = bangcap;
             textBox19.Text = chuyenmon;
 
+            pictureBox10.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             string projectPath = Application.StartupPath;
             string imagePath = projectPath + @"\ProFile_Images\";
-            string filePath = imagePath + anh;
-            pictureBox10.Image = Image.FromFile(filePath);
-            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            if (anh != "")
+            {
+                
+                string filePath = imagePath + anh;
+                pictureBox10.Image = Image.FromFile(filePath);
+            }
+            else {
+                string filePath = imagePath + "default.png";
+                pictureBox10.Image = Image.FromFile(filePath);
+            }
         }
 
 
@@ -119,7 +128,8 @@ namespace QLPKT
             {
                 // Load the selected image into the PictureBox control
                 pictureBox10.Image = Image.FromFile(dialog.FileName);
-                pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+                pictureBox10.BackgroundImageLayout = ImageLayout.Center;
+                pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 // Save the image to a folder in the project directory
                 string projectPath = Application.StartupPath;

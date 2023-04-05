@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace QLPKT
 {
@@ -73,6 +74,27 @@ namespace QLPKT
             textBox10.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             textBox11.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
 
+            // Set the PictureBox control's BorderStyle property to None
+            picb_avt.BorderStyle = BorderStyle.None;
+
+            // Create a new GraphicsPath object with a rounded rectangle shape
+            GraphicsPath path = new GraphicsPath();
+            int borderRadius = 20; // Change this value to adjust the amount of rounding
+            Rectangle bounds = new Rectangle(0, 0, picb_avt.Width, picb_avt.Height);
+            path.AddArc(bounds.X, bounds.Y, borderRadius, borderRadius, 180, 90);
+            path.AddArc(bounds.X + bounds.Width - borderRadius, bounds.Y, borderRadius, borderRadius, 270, 90);
+            path.AddArc(bounds.X + bounds.Width - borderRadius, bounds.Y + bounds.Height - borderRadius, borderRadius, borderRadius, 0, 90);
+            path.AddArc(bounds.X, bounds.Y + bounds.Height - borderRadius, borderRadius, borderRadius, 90, 90);
+            path.CloseFigure();
+
+            // Set the PictureBox control's Region property to a new Region object created from the GraphicsPath object
+            picb_avt.Region = new Region(path);
+
+
+            picb_avt.BackgroundImageLayout = ImageLayout.Center;
+            picb_avt.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
             string imagePath = Path.Combine("ProFile_Images", dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
             if (File.Exists(imagePath))
             {
@@ -82,7 +104,6 @@ namespace QLPKT
             {
                 picb_avt.Image = Image.FromFile(imagePath = Path.Combine("ProFile_Images", "default.png"));
             }
-            picb_avt.BackgroundImageLayout = ImageLayout.Stretch;
 
 
         }

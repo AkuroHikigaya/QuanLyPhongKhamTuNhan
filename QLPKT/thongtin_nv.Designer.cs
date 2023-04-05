@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thongtin_nv));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pn_overlay = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -108,7 +108,7 @@
             // 
             this.pn_overlay.Controls.Add(this.label15);
             this.pn_overlay.Controls.Add(this.pictureBox4);
-            this.pn_overlay.Location = new System.Drawing.Point(221, 213);
+            this.pn_overlay.Location = new System.Drawing.Point(156, 447);
             this.pn_overlay.Name = "pn_overlay";
             this.pn_overlay.Size = new System.Drawing.Size(871, 228);
             this.pn_overlay.TabIndex = 52;
@@ -261,10 +261,10 @@
             // 
             this.picb_avt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picb_avt.BackgroundImage")));
             this.picb_avt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picb_avt.Location = new System.Drawing.Point(16, 37);
+            this.picb_avt.Location = new System.Drawing.Point(22, 35);
             this.picb_avt.Margin = new System.Windows.Forms.Padding(2);
             this.picb_avt.Name = "picb_avt";
-            this.picb_avt.Size = new System.Drawing.Size(139, 164);
+            this.picb_avt.Size = new System.Drawing.Size(163, 179);
             this.picb_avt.TabIndex = 52;
             this.picb_avt.TabStop = false;
             // 
@@ -275,7 +275,7 @@
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label14.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label14.Location = new System.Drawing.Point(559, 172);
+            this.label14.Location = new System.Drawing.Point(579, 169);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 22);
             this.label14.TabIndex = 51;
@@ -288,7 +288,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label9.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label9.Location = new System.Drawing.Point(171, 170);
+            this.label9.Location = new System.Drawing.Point(207, 166);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 22);
             this.label9.TabIndex = 51;
@@ -301,7 +301,7 @@
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label13.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label13.Location = new System.Drawing.Point(559, 139);
+            this.label13.Location = new System.Drawing.Point(579, 136);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(88, 22);
             this.label13.TabIndex = 51;
@@ -314,7 +314,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label8.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label8.Location = new System.Drawing.Point(171, 137);
+            this.label8.Location = new System.Drawing.Point(207, 133);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 22);
             this.label8.TabIndex = 51;
@@ -327,7 +327,7 @@
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label12.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label12.Location = new System.Drawing.Point(559, 105);
+            this.label12.Location = new System.Drawing.Point(579, 102);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 22);
             this.label12.TabIndex = 51;
@@ -340,7 +340,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label7.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label7.Location = new System.Drawing.Point(171, 103);
+            this.label7.Location = new System.Drawing.Point(207, 99);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 22);
             this.label7.TabIndex = 51;
@@ -350,19 +350,19 @@
             // 
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(684, 173);
+            this.textBox11.Location = new System.Drawing.Point(704, 170);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(155, 46);
+            this.textBox11.Size = new System.Drawing.Size(149, 46);
             this.textBox11.TabIndex = 50;
             // 
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(256, 173);
+            this.textBox6.Location = new System.Drawing.Point(292, 169);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(279, 19);
+            this.textBox6.Size = new System.Drawing.Size(258, 19);
             this.textBox6.TabIndex = 50;
             // 
             // label11
@@ -372,7 +372,7 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label11.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label11.Location = new System.Drawing.Point(559, 73);
+            this.label11.Location = new System.Drawing.Point(579, 70);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(120, 22);
             this.label11.TabIndex = 51;
@@ -385,7 +385,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(171, 71);
+            this.label6.Location = new System.Drawing.Point(207, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 22);
             this.label6.TabIndex = 51;
@@ -395,16 +395,16 @@
             // 
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(684, 142);
+            this.textBox10.Location = new System.Drawing.Point(704, 139);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(114, 19);
+            this.textBox10.Size = new System.Drawing.Size(108, 19);
             this.textBox10.TabIndex = 50;
             // 
             // textBox12
             // 
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(296, 173);
+            this.textBox12.Location = new System.Drawing.Point(332, 169);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(135, 19);
             this.textBox12.TabIndex = 50;
@@ -413,9 +413,9 @@
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(309, 140);
+            this.textBox5.Location = new System.Drawing.Point(345, 136);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(226, 19);
+            this.textBox5.Size = new System.Drawing.Size(205, 19);
             this.textBox5.TabIndex = 50;
             // 
             // label10
@@ -425,7 +425,7 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label10.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label10.Location = new System.Drawing.Point(559, 41);
+            this.label10.Location = new System.Drawing.Point(579, 38);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 22);
             this.label10.TabIndex = 51;
@@ -435,9 +435,9 @@
             // 
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(684, 108);
+            this.textBox9.Location = new System.Drawing.Point(704, 105);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(130, 19);
+            this.textBox9.Size = new System.Drawing.Size(124, 19);
             this.textBox9.TabIndex = 50;
             // 
             // label5
@@ -447,7 +447,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.label5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label5.Location = new System.Drawing.Point(171, 39);
+            this.label5.Location = new System.Drawing.Point(207, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 22);
             this.label5.TabIndex = 51;
@@ -457,35 +457,35 @@
             // 
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(684, 76);
+            this.textBox8.Location = new System.Drawing.Point(704, 73);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(114, 19);
+            this.textBox8.Size = new System.Drawing.Size(108, 19);
             this.textBox8.TabIndex = 50;
             // 
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(309, 104);
+            this.textBox4.Location = new System.Drawing.Point(345, 100);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 20);
+            this.textBox4.Size = new System.Drawing.Size(205, 20);
             this.textBox4.TabIndex = 50;
             // 
             // textBox7
             // 
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(684, 44);
+            this.textBox7.Location = new System.Drawing.Point(704, 41);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 19);
+            this.textBox7.Size = new System.Drawing.Size(108, 19);
             this.textBox7.TabIndex = 49;
             // 
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(256, 74);
+            this.textBox3.Location = new System.Drawing.Point(345, 72);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(178, 19);
             this.textBox3.TabIndex = 50;
@@ -494,7 +494,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(256, 42);
+            this.textBox2.Location = new System.Drawing.Point(345, 40);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(178, 19);
             this.textBox2.TabIndex = 49;
@@ -562,15 +562,15 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(156, 123);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
