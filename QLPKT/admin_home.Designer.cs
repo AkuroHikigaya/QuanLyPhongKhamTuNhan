@@ -310,6 +310,7 @@
             this.label6.Size = new System.Drawing.Size(158, 25);
             this.label6.TabIndex = 47;
             this.label6.Text = "Quản lý thuốc";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox6
             // 

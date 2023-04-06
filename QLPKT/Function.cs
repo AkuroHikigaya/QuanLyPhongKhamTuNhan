@@ -19,7 +19,7 @@ namespace QLPKT
         public SqlConnection connect()
         {
             SqlConnection conn;
-            conn = new SqlConnection("server = DESKTOP-33H3AUS; database = QLPK; Integrated Security = True");
+            conn = new SqlConnection("server = DESKTOP-MARVEL; database = QLPKTN; Integrated Security = True");
             conn.Open();
             return conn;
         }
@@ -70,6 +70,13 @@ namespace QLPKT
             
                 SqlCommand comd = new SqlCommand(query, conn);
                 comd.ExecuteNonQuery();
+        }
+        public void ThemThuoc(string T_ID, string T_TEN, string T_DVT, string T_GIA, SqlConnection conn)
+        {
+            string query = "insert into THUOC values('" + T_ID + "',N'" + T_TEN+ "',N'" + T_DVT + "','" + T_GIA + "')";
+            MessageBox.Show(query);
+            SqlCommand comd = new SqlCommand(query, conn);
+            comd.ExecuteNonQuery();
         }
 
         public Image makeGreyImage(PictureBox pb)

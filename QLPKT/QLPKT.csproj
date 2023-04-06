@@ -143,6 +143,12 @@
     <Compile Include="thongtin_nv.Designer.cs">
       <DependentUpon>thongtin_nv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thuoc.Designer.cs">
+      <DependentUpon>Thuoc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="admin_home.resx">
       <DependentUpon>admin_home.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thongtin_nv.resx">
       <DependentUpon>thongtin_nv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thuoc.resx">
+      <DependentUpon>Thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="packages.config" />
