@@ -299,6 +299,7 @@
             this.bttn_toQLT.Name = "bttn_toQLT";
             this.bttn_toQLT.Size = new System.Drawing.Size(262, 75);
             this.bttn_toQLT.TabIndex = 20;
+            this.bttn_toQLT.Click += new System.EventHandler(this.bttn_toQLT_Click);
             // 
             // label6
             // 
@@ -310,6 +311,7 @@
             this.label6.Size = new System.Drawing.Size(158, 25);
             this.label6.TabIndex = 47;
             this.label6.Text = "Quản lý thuốc";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox6
             // 

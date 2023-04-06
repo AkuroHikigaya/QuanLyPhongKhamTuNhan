@@ -109,3 +109,5 @@ D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.csproj.CoreCompileInputs.cache
 D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.csproj.CopyComplete
 D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.exe
 D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.pdb
+D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.Thuoc.resources
+D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.Thuoc.resources

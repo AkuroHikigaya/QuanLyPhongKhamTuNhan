@@ -120,6 +120,19 @@ namespace QLPKT
             this.Close();
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Thuoc f1 = new Thuoc(id, name, role);
+            f1.Show();
+            this.Close();
+        }
+
+        private void bttn_toQLT_Click(object sender, EventArgs e)
+        {
+            Thuoc f1 = new Thuoc(id, name, role);
+            f1.Show();
+            this.Close();
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
