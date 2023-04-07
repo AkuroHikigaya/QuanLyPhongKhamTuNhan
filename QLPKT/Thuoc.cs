@@ -34,23 +34,36 @@ namespace QLPKT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = "update THUOC set T_TEN=N'" + textBox2.Text + "', T_DVT=N'" + textBox3.Text + "',T_GIA='" + textBox4.Text + "'  where T_ID='" + textBox1.Text + "'";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            functions.HienThiDG(dataGridView1, "select T_ID as 'ID', T_TEN as 'Tên thuốc', T_DVT as 'ĐVT', T_GIA as 'Giá' from THUOC", conn);
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "") {
+                string query = "update THUOC set T_TEN=N'" + textBox2.Text + "', T_DVT=N'" + textBox3.Text + "',T_GIA='" + textBox4.Text + "'  where T_ID='" + textBox1.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                functions.HienThiDG(dataGridView1, "select T_ID as 'ID', T_TEN as 'Tên thuốc', T_DVT as 'ĐVT', T_GIA as 'Giá' from THUOC", conn);
+            }
+            else
+            {
+                MessageBox.Show("Chọn thuốc để sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắn chắn muốn xoá?", "Xác nhận xoá?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes) {
-                string query = "delete from THUOC where T_ID='" + textBox1.Text + "'";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Đã xoá thuốc!", "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.None);
-                functions.HienThiDG(dataGridView1, "select T_ID as 'ID', T_TEN as 'Tên thuốc', T_DVT as 'ĐVT', T_GIA as 'Giá' from THUOC", conn);
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắn chắn muốn xoá?", "Xác nhận xoá?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes) {
+                    string query = "delete from THUOC where T_ID='" + textBox1.Text + "'";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Đã xoá thuốc!", "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    functions.HienThiDG(dataGridView1, "select T_ID as 'ID', T_TEN as 'Tên thuốc', T_DVT as 'ĐVT', T_GIA as 'Giá' from THUOC", conn);
+                }
             }
-            
+            else
+            {
+                MessageBox.Show("Chọn thuốc để xoá!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void timkiem_KeyDown(object sender, KeyEventArgs e)

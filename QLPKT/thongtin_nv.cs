@@ -200,7 +200,7 @@ namespace QLPKT
             }
             else
             {
-                MessageBox.Show("Chọn nhân viên để xoá!", "Xác nhận xoá?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBox.Show("Chọn nhân viên để xoá!", "Xác nhận xoá?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
