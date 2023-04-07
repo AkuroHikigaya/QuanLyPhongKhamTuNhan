@@ -19,7 +19,7 @@ namespace QLPKT
         public SqlConnection connect()
         {
             SqlConnection conn;
-            conn = new SqlConnection("server = DESKTOP-JPF548A; database = QLPK; Integrated Security = True");
+            conn = new SqlConnection("server = DESKTOP-MARVEL; database = QLPKTN; Integrated Security = True");
             conn.Open();
             return conn;
         }
@@ -66,10 +66,11 @@ namespace QLPKT
         public void Them(string NV_ID, string CV_ID, string NV_TEN, string NV_NGAYSINH, string NV_EMAIL, string NV_GIOITINH, string NV_SDT, string NV_ANH, string NV_TAIKHOAN, string NV_MATKHAU, string BS_BANGCAP, string BS_CHUYENMON, string ROLE, SqlConnection conn)
         {
             string query = "insert into NHAN_VIEN values('" + NV_ID + "','" + CV_ID + "',N'" + NV_TEN + "','" + NV_NGAYSINH + "','" + NV_EMAIL + "',N'" + NV_GIOITINH + "','" + NV_SDT + "','" + NV_ANH + "','" + NV_TAIKHOAN + "','" + NV_MATKHAU + "',N'" + BS_BANGCAP + "',N'" + BS_CHUYENMON + "',N'" + ROLE + "')";
-            MessageBox.Show(query);
+
             
                 SqlCommand comd = new SqlCommand(query, conn);
                 comd.ExecuteNonQuery();
+
         }
         public void ThemThuoc(string T_ID, string T_TEN, string T_DVT, string T_GIA, SqlConnection conn)
         {

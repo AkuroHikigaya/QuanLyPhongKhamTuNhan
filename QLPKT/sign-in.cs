@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections;
 
 namespace QLPKT
 {
@@ -93,11 +94,38 @@ namespace QLPKT
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            Function f = new Function();
-            f.Them(textBox1.Text, comboBox2.SelectedValue.ToString(), textBox3.Text, textBox5.Text, textBox7.Text, gioitinh, textBox9.Text, textBox11.Text, textBox22.Text, textBox21.Text, textBox14.Text, textBox19.Text, role, conn);
-            thongtin_nv ttnv = new thongtin_nv(tagid, tagname, tagrole);
-            ttnv.Show();
-            this.Hide();
+            if (textBox1.Text != "" && comboBox2.SelectedValue.ToString() != "" && textBox3.Text != "" && textBox5.Text != "" && textBox7.Text != "" && gioitinh != "" && textBox9.Text != "" && textBox22.Text != "" && textBox21.Text != "" && textBox14.Text != "" && textBox19.Text != ""  )
+            {
+                Function f = new Function();
+                string sql = "select count(NV_ID) from NHAN_VIEN where NV_ID = '" + textBox1.Text + "' ";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                int have_nv = (int)cmd.ExecuteScalar();
+                if (have_nv == 0)
+                {
+                    if (textBox1.Text.StartsWith("NV_"))
+                    {
+                    f.Them(textBox1.Text, comboBox2.SelectedValue.ToString(), textBox3.Text, textBox5.Text, textBox7.Text, gioitinh, textBox9.Text, textBox11.Text, textBox22.Text, textBox21.Text, textBox14.Text, textBox19.Text, role, conn);
+                    thongtin_nv ttnv = new thongtin_nv(tagid, tagname, tagrole);
+                    MessageBox.Show("Thêm nhân viên thành công !");
+                    ttnv.Show();
+                    this.Hide();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhân viên id phải có định dạng bắt đầu là NV_(Số thứ tự ngẫu nhiên) !");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mã nhân viên đã tồn tại !");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin !");
+            }
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
