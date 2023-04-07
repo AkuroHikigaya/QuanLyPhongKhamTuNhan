@@ -77,11 +77,6 @@ namespace QLPKT
 
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];

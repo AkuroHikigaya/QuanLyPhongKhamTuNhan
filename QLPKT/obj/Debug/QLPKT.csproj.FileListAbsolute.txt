@@ -111,3 +111,4 @@ D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.exe
 D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.pdb
 D:\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.Thuoc.resources
 D:\CTU\nam3\2\ltud\btnhom\QLPKTN\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.Thuoc.resources
+E:\Now_HK\LTUD\QuanLyPhongKhamTuNhan\QLPKT\obj\Debug\QLPKT.Thuoc.resources

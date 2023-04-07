@@ -175,7 +175,9 @@ namespace QLPKT
             DataGridViewRow row = bnDataTable.SelectedRows[0];
             string idPhieuKham = row.Cells["PK_ID"].Value.ToString();
             add_invoice hd = new add_invoice(idPhieuKham);
-            hd.Show();
+            this.Opacity = 0.7;
+            hd.ShowDialog();
+            this.Opacity = 1;
         }
 
         private void bnDataTable_DoubleClick(object sender, EventArgs e)

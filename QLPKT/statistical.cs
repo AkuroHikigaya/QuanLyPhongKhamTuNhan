@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,11 @@ namespace QLPKT
             this.role = role;
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btn_SearchDoanhThu_Click(object sender, EventArgs e)
         {
             lb_tongHD.Text = "Tổng hóa đơn: ";
@@ -51,7 +57,7 @@ namespace QLPKT
                 i++;
             }
             lb_tongHD.Text += counthd;
-            lb_tongDT.Text += countdt + " VNĐ";
+            lb_tongDT.Text += countdt.ToString("#,##0", new CultureInfo("vi-VN")) + " VNĐ";
 
         }
 

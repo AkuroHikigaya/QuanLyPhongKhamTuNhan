@@ -173,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(409, 308);
             this.Controls.Add(this.lb_idNV);
             this.Controls.Add(this.lb_idBN);
@@ -187,6 +188,7 @@
             this.Controls.Add(this.maNV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "edit_invoice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "edit_invoice";
             this.Load += new System.EventHandler(this.edit_invoice_Load);
             this.ResumeLayout(false);
