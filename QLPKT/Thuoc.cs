@@ -42,10 +42,15 @@ namespace QLPKT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string query = "delete from THUOC where T_ID='" + textBox1.Text + "'";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            functions.HienThiDG(dataGridView1, "select T_ID as 'ID', T_TEN as 'Tên thuốc', T_DVT as 'ĐVT', T_GIA as 'Giá' from THUOC", conn);
+            DialogResult result = MessageBox.Show("Bạn có chắn chắn muốn xoá?", "Xác nhận xoá?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) {
+                string query = "delete from THUOC where T_ID='" + textBox1.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Đã xoá thuốc!", "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.None);
+                functions.HienThiDG(dataGridView1, "select T_ID as 'ID', T_TEN as 'Tên thuốc', T_DVT as 'ĐVT', T_GIA as 'Giá' from THUOC", conn);
+            }
+            
         }
 
         private void timkiem_KeyDown(object sender, KeyEventArgs e)
@@ -71,9 +76,15 @@ namespace QLPKT
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            functions.ThemThuoc(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, conn);
-            functions.HienThiDG(dataGridView1, "select * from THUOC", conn);
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                MessageBox.Show("Thêm thuốc thành công!", "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.None);
+                functions.ThemThuoc(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, conn);
+                functions.HienThiDG(dataGridView1, "select * from THUOC", conn);
+            }
+            else {
+                MessageBox.Show("Vui lòng nhập thông tin thuốc!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
