@@ -167,23 +167,42 @@ namespace QLPKT
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            edit_nv frm = new edit_nv(manv, tennv, ngaysinh, gioitinh, email, sdt, taikhoan, matkhau, quyenhan, bangcap, chuyenmon, chucvu, anh, id, name, role);
-            frm.Show();
-            this.Hide();
+            if (pn_overlay.Visible == false)
+            {
+                edit_nv frm = new edit_nv(manv, tennv, ngaysinh, gioitinh, email, sdt, taikhoan, matkhau, quyenhan, bangcap, chuyenmon, chucvu, anh, id, name, role);
+                frm.Show();
+                this.Hide();
+            }
+            else {
+                MessageBox.Show("Chọn nhân viên để sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string query = "delete from NHAN_VIEN where NV_ID='" + textBox2.Text + "'";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            Function F = new Function();
-            F.HienThiDG(dataGridView1, "select nv.nv_id as 'Mã NV' , cv.cv_tenchucvu as 'Chức vụ', nv.nv_ten as 'Họ tên' , FORMAT(nv.nv_ngaysinh, 'dd/MM/yyyy') as 'Ngày sinh', nv.nv_gioitinh as 'Giới tính', nv.nv_email as Email, nv.nv_sdt as SĐT,nv.bs_bangcap as 'Bằng cấp', nv.bs_chuyenmon as 'Chuyên môn', nv.nv_taikhoan as 'Tên đăng nhập', nv.nv_matkhau as 'Mật khẩu', nv.role as 'Vai trò',  nv.nv_anh as 'Link ảnh' from NHAN_VIEN nv, CHUC_VU cv where nv.cv_id = cv.cv_id; ", conn);
+            if (pn_overlay.Visible == false)
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá nhân viên này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            dataGridView1.Columns["Link ảnh"].Visible = false;
-            dataGridView1.Columns["Mật khẩu"].Visible = false;
-            dataGridView1.Columns["Tên đăng nhập"].Visible = false;
-            pn_overlay.Visible = true;
+                if (result == DialogResult.Yes)
+                {
+                    string query = "delete from NHAN_VIEN where NV_ID='" + textBox2.Text + "'";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                    Function F = new Function();
+                    F.HienThiDG(dataGridView1, "select nv.nv_id as 'Mã NV' , cv.cv_tenchucvu as 'Chức vụ', nv.nv_ten as 'Họ tên' , FORMAT(nv.nv_ngaysinh, 'dd/MM/yyyy') as 'Ngày sinh', nv.nv_gioitinh as 'Giới tính', nv.nv_email as Email, nv.nv_sdt as SĐT,nv.bs_bangcap as 'Bằng cấp', nv.bs_chuyenmon as 'Chuyên môn', nv.nv_taikhoan as 'Tên đăng nhập', nv.nv_matkhau as 'Mật khẩu', nv.role as 'Vai trò',  nv.nv_anh as 'Link ảnh' from NHAN_VIEN nv, CHUC_VU cv where nv.cv_id = cv.cv_id; ", conn);
+
+                    dataGridView1.Columns["Link ảnh"].Visible = false;
+                    dataGridView1.Columns["Mật khẩu"].Visible = false;
+                    dataGridView1.Columns["Tên đăng nhập"].Visible = false;
+                    pn_overlay.Visible = true;
+                }                
+            }
+            else
+            {
+                MessageBox.Show("Chọn nhân viên để xoá!", "Xác nhận xoá?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+            
         }
         
     }

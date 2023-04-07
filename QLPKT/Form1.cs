@@ -41,33 +41,39 @@ namespace QLPKT
             f.connect();
             string us = tb_username.Text;
             string pw = tb_password.Text;
-            string sql = "select nv_id, nv_ten, role from NHAN_VIEN where nv_taikhoan = @us and nv_matkhau = @pw";
-            SqlCommand command = new SqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@us", us);
-            command.Parameters.AddWithValue("@pw", pw);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
+            if (us != "" && pw != "")
             {
-                string id = reader.GetString(0);
-                string name = reader.GetString(1);
-                string role = reader.GetString(2);
-                if (role == "Admin" || role == "Bác sĩ")
+                string sql = "select nv_id, nv_ten, role from NHAN_VIEN where nv_taikhoan = @us and nv_matkhau = @pw";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@us", us);
+                command.Parameters.AddWithValue("@pw", pw);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
                 {
-                    admin_home adm = new admin_home(id, name, role);
-                    adm.Show();
-                    this.Hide();
+                    string id = reader.GetString(0);
+                    string name = reader.GetString(1);
+                    string role = reader.GetString(2);
+                    if (role == "Admin" || role == "Bác sĩ")
+                    {
+                        admin_home adm = new admin_home(id, name, role);
+                        adm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        //Chuyen trang chu o day
+                    }
                 }
                 else
                 {
-                    //Chuyen trang chu o day
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                reader.Close();
             }
-            else
-            {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            reader.Close();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
