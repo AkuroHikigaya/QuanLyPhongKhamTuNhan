@@ -75,7 +75,6 @@ namespace QLPKT
         public void ThemThuoc(string T_ID, string T_TEN, string T_DVT, string T_GIA, SqlConnection conn)
         {
             string query = "insert into THUOC values('" + T_ID + "',N'" + T_TEN+ "',N'" + T_DVT + "','" + T_GIA + "')";
-            MessageBox.Show(query);
             SqlCommand comd = new SqlCommand(query, conn);
             comd.ExecuteNonQuery();
         }

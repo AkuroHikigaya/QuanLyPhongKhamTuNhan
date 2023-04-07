@@ -91,9 +91,18 @@ namespace QLPKT
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
             {
-                MessageBox.Show("Thêm thuốc thành công!", "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.None);
-                functions.ThemThuoc(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, conn);
-                functions.HienThiDG(dataGridView1, "select * from THUOC", conn);
+                string sql = "select count(*) from THUOC where T_ID = '" + textBox1.Text + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                int haved = (int)cmd.ExecuteScalar();
+                if (haved == 0)
+                {
+                    MessageBox.Show("Thêm thuốc thành công!", "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    functions.ThemThuoc(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, conn);
+                    functions.HienThiDG(dataGridView1, "select * from THUOC", conn);
+                }
+                else {
+                    MessageBox.Show("ID thuốc đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else {
                 MessageBox.Show("Vui lòng nhập thông tin thuốc!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
