@@ -19,7 +19,7 @@ namespace QLPKT
         public SqlConnection connect()
         {
             SqlConnection conn;
-            conn = new SqlConnection("server = DESKTOP-33H3AUS; database = QLPK; Integrated Security = True");
+            conn = new SqlConnection("server = DESKTOP-JPF548A; database = QLPK; Integrated Security = True");
             conn.Open();
             return conn;
         }
