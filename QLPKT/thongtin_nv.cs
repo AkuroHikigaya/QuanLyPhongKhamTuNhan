@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
 using System.Drawing.Drawing2D;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace QLPKT
 {
@@ -126,8 +127,7 @@ namespace QLPKT
             if (e.KeyCode == Keys.Enter)
             {
                 Function H = new Function();
-                //S
-                H.HienThiDG(dataGridView1, "select nv.nv_id as 'Mã NV' , cv.cv_tenchucvu as 'Chức vụ', nv.nv_ten as 'Họ tên' , FORMAT(nv.nv_ngaysinh, 'dd/MM/yyyy') as 'Ngày sinh', nv.nv_gioitinh as 'Giới tính', nv.nv_email as Email, nv.nv_sdt as SĐT,nv.bs_bangcap as 'Bằng cấp', nv.bs_chuyenmon as 'Chuyên môn', nv.nv_taikhoan as 'Tên đăng nhập', nv.nv_matkhau as 'Mật khẩu', nv.role as 'Vai trò',  nv.nv_anh as 'Link ảnh' from NHAN_VIEN where NV_TEN like N'%" + textBox1.Text + "%' OR 'Chức vụ' like N'%" + textBox1.Text + "%' OR 'Giới tính' like N'%" + textBox1.Text + "%' OR 'SĐT' like N'%" + textBox1.Text + "%' ", conn);
+                H.HienThiDG(dataGridView1, "select nv.nv_id as 'Mã NV', cv.cv_tenchucvu as 'Chức vụ', nv.nv_ten as 'Họ tên', FORMAT(nv.nv_ngaysinh, 'dd/MM/yyyy') as 'Ngày sinh', nv.nv_gioitinh as 'Giới tính', nv.nv_email as Email, nv.nv_sdt as SĐT, nv.bs_bangcap as 'Bằng cấp', nv.bs_chuyenmon as 'Chuyên môn', nv.nv_taikhoan as 'Tên đăng nhập', nv.nv_matkhau as 'Mật khẩu', nv.role as 'Vai trò', nv.nv_anh as 'Link ảnh' from NHAN_VIEN nv join CHUC_VU cv on cv.cv_id = nv.cv_id where nv.nv_ten like N'%" + textBox1.Text + "%' OR cv.cv_tenchucvu like N'%" + textBox1.Text + "%' OR nv.nv_gioitinh like N'%" + textBox1.Text + "%' OR nv.nv_sdt like N'%" + textBox1.Text + "%' ", conn);
             }
         }
         
